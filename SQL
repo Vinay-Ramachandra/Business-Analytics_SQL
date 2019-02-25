@@ -1,0 +1,48 @@
+#Command 1
+SELECT  * FROM [bigquery-public-data:hacker_news.full]
+output
+https://docs.google.com/spreadsheets/d/1eeebL45_I9mYAoQWsPclrDcYSieEelczRpclR1EcFB0/edit#gid=978219611
+#Command 2
+SELECT time   
+FROM [bigquery-public-data:hacker_news.full]
+WHERE time=1214947811
+Output
+https://docs.google.com/spreadsheets/d/1ZNz692DLTvu_70eEVu2paG2M124kTODTH41b_YE3Wu4/edit#gid=1698279390
+#Command 3
+SELECT time FROM [bigquery-public-data:hacker_news.full] LIMIT 100
+Output
+https://docs.google.com/spreadsheets/d/1VyJnCAW5SBlE_sbnZ30jSp-Ckcic6QM4qXpeRkgKOBo/edit#gid=853808943
+#Command 4
+SELECT COUNT(id)
+FROM [bigquery-public-data:hacker_news.full]
+Output
+https://docs.google.com/spreadsheets/d/1Wyoc-9Zno2n2fn_SyuIqRiK-XJfVUy-fGTu74Z6rp1k/edit#gid=1220886817
+#Command 5
+SELECT parent,Count(*) FROM [bigquery-public-data:hacker_news.full]
+GROUP BY parent LIMIT 100
+Output
+https://docs.google.com/spreadsheets/d/1_y84ubiJswiBFE5vykvpZNgUErsBh8uqzjk1xFs8drU/edit#gid=186288430
+#Command 6
+SELECT  * FROM [bigquery-public-data:hacker_news.full]
+ORDER BY parent DESC LIMIT 50
+Output
+https://docs.google.com/spreadsheets/d/1B1SY6LmPjllfoAIjFCMm0qv29qwhnjbEPfwUxWbUm-U/edit#gid=663421215
+#Command 7
+SELECT MAX(parent) FROM [bigquery-public-data:hacker_news.full] GROUP BY time
+Output
+https://docs.google.com/spreadsheets/d/1kczZiwZ-r_lEMNioL5RoN44IKrVqWf15YKETNC4nPh4/edit
+#Command 8
+SELECT AVG(parent) FROM [bigquery-public-data:hacker_news.full] GROUP BY time LIMIT 100
+Output
+https://docs.google.com/spreadsheets/d/1EHuSxB1ISUA2DW6xJZaCmkkiUxgdXm94S39yW5cbtDc/edit#gid=916642809
+#Command 9
+SELECT score ranking
+FROM [bigquery-public-data:hacker_news.full]
+WHERE score = null
+AND ranking = null
+output
+Query returned zero records. 
+#Command 10
+SELECT MIN(time) FROM [bigquery-public-data:hacker_news.full] GROUP BY parent limit 1000
+output
+https://docs.google.com/spreadsheets/d/1GmVIump_xkszmeDqqmPFJU0n5vdeujn75LoTtuFLqT0/edit#gid=1201174154
